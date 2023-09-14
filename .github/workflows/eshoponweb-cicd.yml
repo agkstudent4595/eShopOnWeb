@@ -79,7 +79,7 @@ jobs:
       uses: azure/arm-deploy@v1
       with:
         subscriptionId: ${{ env.subscriptionId }}
-        resourceGroupName: ${{ env.resourceGroup }}
+        resourceGroupName: ${{ env.ResourceGroup }}
         template: bicep-template/webapp.bicep
         parameters: 'webAppName=${{ env.webAppName }} location=${{ env.LOCATION }}'
         failOnStdErr: false   
