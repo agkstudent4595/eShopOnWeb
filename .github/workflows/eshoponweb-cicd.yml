@@ -81,13 +81,13 @@ jobs:
         subscriptionId: ${{ env.c97bf154-3b7d-4539-8658-745fd62dc63c }}
         resourceGroupName: ${{ env.rg-az400-eshoponweb-agk4595 }}
         template: bicep-template/webapp.bicep
-        parameters: 'webAppName=${{ env.WEBAPP-NAME }} location=${{ env.LOCATION }}'
+        parameters: 'webAppName=${{ env.az400-webapp-agk4595 }} location=${{ env.LOCATION }}'
         failOnStdErr: false   
     
     # Publish website to Azure App Service (WebApp)
     - name: Publish Website to WebApp
       uses: Azure/webapps-deploy@v2
       with:
-        app-name: ${{ env.WEBAPP-NAME  }}
+        app-name: ${{ env.  }}
         package: .net-app
    
